@@ -1,0 +1,11 @@
+username: suhaas
+password: root
+
+username: sharon
+password: django123
+
+username: User1
+password: root1234
+
+username: NewUser
+password: testuser123
