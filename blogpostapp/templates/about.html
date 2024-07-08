@@ -1,4 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'base_about.html' %}
+{% load static %}
 {% block content %}
     <h1>{{title}} Page</h1>
+    <div>
+        <img src="{% static 'bit.jpg' %}"  alt="Our College">
+    </div>
+    <br></br>
+    <div>
+        <p>Bangalore Institute of Technology is an autonomous engineering college offering undergraduate and postgraduate engineering courses, affiliated to the Visvesvaraya Technological University, Belgaum located in Bangalore. The institution came into being in August, 1979 under the auspices of Rajya Vokkaligara Sangha, Bengaluru.</p>
+    </div>
 {% endblock %}

@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Post
 from django.views.generic import (ListView, 
@@ -14,11 +15,20 @@ context = {
 }
 
 def home(request):
-    return render(request,'home.html',context)
+    return render(request,'home.html')
+
+def search(request):
+    query=request.GET['search']
+    posts_title= Post.objects.filter(title__icontains=query)
+    posts_content = Post.objects.filter(content__icontains=query)
+    posts = posts_title.union(posts_content)
+    context={'posts': posts}
+    return render(request,'search.html',context)
+    # return HttpResponse('this is search results')
 
 class PostListView(ListView):
     model = Post
-    template_name = 'home.html'  #<app>/<model>_<viewtype>.html
+    template_name = 'home.html'  
     context_object_name = 'posts' 
     # by default refers to a post as object. so instead of changing the name 
     # in template new name can be given to refer it by.
