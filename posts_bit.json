@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Internals Postponed",
+        "content": "Second internals for 4 and 6 sem students have been postponed to 05-07-2024.",
+        "user_id": 1
+      },
+      {
+        "title": "Seminar on Web3",
+        "content": "Dear students,\nEveryone must attend the talk on Web3 given by Dr. Anjali D.\nAttendance is mandatory.",
+        "user_id": 2
+      },
+      {
+        "title": "Walkathon organised for Mens Mental health.",
+        "content": "A walkathon is organised by the CSE dept on 5th of july to spead awareness on men's mental health.\nActivity points will be provided.",
+        "user_id": 1
+      },
+      {
+        "title": "Hackathon organised",
+        "content": "GDSC BIT is organising 'amBITion 2024', a national level hackathon on 6 and 7 July.\nPlease particiate and make the event a success.",
+        "user_id": 1
+      }
+]
