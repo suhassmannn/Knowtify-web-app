@@ -21,7 +21,8 @@ def search(request):
     query=request.GET['search']
     posts_title= Post.objects.filter(title__icontains=query)
     posts_content = Post.objects.filter(content__icontains=query)
-    posts = posts_title.union(posts_content)
+    posts_author = Post.objects.filter(author__username__icontains=query)
+    posts = posts_title.union(posts_content,posts_author)
     context={'posts': posts}
     return render(request,'search.html',context)
     # return HttpResponse('this is search results')
